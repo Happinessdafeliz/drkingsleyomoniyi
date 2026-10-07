@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dr. Adebayo Kingsley Omoniyi</title>
+<meta name="description" content="Lecturer, researcher, author, youth coach, pastor and speaker. Research in phytochemistry, natural products and food safety.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,300..600&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1b1712;
+  --forest:#1f3a2e;
+  --forest-deep:#132620;
+  --kola:#8a4b2a;
+  --gold:#c99a3e;
+  --parchment:#f5efe3;
+  --cream:#fbf8f2;
+  --muted:#6b6257;
+  --line:rgba(27,23,18,.12);
+  --serif:"Fraunces",Georgia,serif;
+  --sans:"Instrument Sans",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+.eyebrow{font-family:var(--sans);font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--kola)}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.08;letter-spacing:-.01em}
+h2{font-size:clamp(34px,5vw,58px)}
+h2 em,h1 em{font-style:italic;font-weight:300;color:var(--kola)}
+
+/* NAV */
+nav{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .3s,box-shadow .3s}
+nav.solid{background:rgba(251,248,242,.94);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.mark{font-family:var(--serif);font-size:20px;text-decoration:none;font-weight:600;color:var(--parchment);transition:color .3s}
+nav.solid .mark{color:var(--forest)}
+.mark span{color:var(--gold)}
+.links{display:flex;gap:30px;list-style:none}
+.links a{text-decoration:none;font-size:14px;font-weight:500;color:var(--parchment);opacity:.85;transition:color .3s}
+nav.solid .links a{color:var(--ink)}
+.links a:hover{opacity:1;color:var(--gold)}
+.burger{display:none;background:none;border:0;width:40px;height:40px;cursor:pointer}
+.burger i{display:block;height:2px;background:var(--parchment);margin:6px 8px;transition:.3s}
+nav.solid .burger i{background:var(--forest)}
+@media(max-width:820px){
+  .burger{display:block}
+  .links{position:fixed;inset:68px 0 auto 0;flex-direction:column;gap:0;background:var(--cream);padding:8px 20px 20px;box-shadow:0 12px 30px rgba(0,0,0,.08);transform:translateY(-130%);transition:transform .35s}
+  .links.open{transform:none}
+  .links a{display:block;padding:14px 0;border-bottom:1px solid var(--line);color:var(--ink)!important;font-size:16px}
+}
+
+/* HERO */
+.hero{background:var(--forest-deep);color:var(--parchment);position:relative;overflow:hidden;padding:120px 0 90px}
+.hero::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(ellipse 60% 50% at 85% 20%,rgba(201,154,62,.18),transparent 70%),
+  radial-gradient(ellipse 50% 60% at 0% 100%,rgba(138,75,42,.35),transparent 70%)}
+.hex-bg{position:absolute;right:-60px;top:60px;width:520px;opacity:.07;pointer-events:none}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center}
+.hero .eyebrow{color:var(--gold)}
+.hero h1{font-size:clamp(44px,7.4vw,96px);margin:18px 0 26px}
+.hero h1 em{color:var(--gold)}
+.hero p.lead{font-size:clamp(17px,1.6vw,20px);max-width:520px;color:rgba(245,239,227,.78)}
+.roles{display:flex;flex-wrap:wrap;gap:8px;margin:30px 0 36px}
+.roles span{border:1px solid rgba(245,239,227,.22);padding:6px 14px;border-radius:99px;font-size:13px;color:rgba(245,239,227,.85)}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:99px;font-weight:600;font-size:15px;text-decoration:none;transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-gold{background:var(--gold);color:var(--forest-deep)}
+.btn-ghost{border:1px solid rgba(245,239,227,.35);color:var(--parchment)}
+.portrait{position:relative;justify-self:center;width:100%;max-width:400px}
+.portrait .frame{aspect-ratio:4/5;border-radius:200px 200px 24px 24px;overflow:hidden;background:#e9e3d7;position:relative;z-index:2;box-shadow:0 30px 60px rgba(0,0,0,.35)}
+.portrait img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.portrait::before{content:"";position:absolute;inset:-14px;border:1px solid var(--gold);border-radius:214px 214px 32px 32px;z-index:1;opacity:.6}
+.badge{position:absolute;z-index:3;left:-28px;bottom:40px;background:var(--parchment);color:var(--forest);padding:14px 18px;border-radius:16px;box-shadow:0 14px 30px rgba(0,0,0,.25);font-size:13px;line-height:1.3;max-width:190px}
+.badge b{display:block;font-family:var(--serif);font-size:20px;font-weight:600;color:var(--kola)}
+@media(max-width:860px){
+  .hero{padding:100px 0 70px}
+  .hero-grid{grid-template-columns:1fr;gap:50px}
+  .portrait{max-width:320px;order:-1}
+  .badge{left:-10px;bottom:-28px}
+}
+
+/* VERSE STRIP */
+.verse{background:var(--gold);color:var(--forest-deep);padding:26px 0;text-align:center}
+.verse p{font-family:var(--serif);font-style:italic;font-size:clamp(18px,2.2vw,24px);max-width:820px;margin:0 auto}
+.verse small{display:block;margin-top:6px;font-family:var(--sans);font-style:normal;font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:600}
+
+section{padding:110px 0}
+@media(max-width:700px){section{padding:76px 0}}
+
+/* THREE CALLINGS */
+.callings-head{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:60px}
+.callings-head p{color:var(--muted);max-width:460px}
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.call{background:#fff;border:1px solid var(--line);border-radius:22px;padding:36px 30px;position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s}
+.call:hover{transform:translateY(-6px);box-shadow:0 24px 50px rgba(31,58,46,.12)}
+.call .num{font-family:var(--serif);font-size:72px;font-weight:300;line-height:1;color:var(--parchment);position:absolute;right:22px;top:14px}
+.call svg{width:46px;height:46px;margin-bottom:26px;stroke:var(--kola);fill:none;stroke-width:1.5}
+.call h3{font-size:28px;margin-bottom:12px;color:var(--forest)}
+.call p{color:var(--muted);font-size:16px}
+@media(max-width:860px){.callings-head,.trio{grid-template-columns:1fr}.callings-head{gap:16px;margin-bottom:40px}}
+
+/* ABOUT */
+.about{background:var(--parchment)}
+.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px}
+.about-text p{margin-bottom:18px;font-size:18px}
+.about-text p:first-child::first-letter{font-family:var(--serif);float:left;font-size:76px;line-height:.85;padding:6px 10px 0 0;color:var(--kola)}
+.members{margin-top:34px;padding-top:28px;border-top:1px solid var(--line)}
+.members ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+.members li{background:var(--cream);border-radius:12px;padding:14px 16px;font-size:14px;font-weight:500;display:flex;gap:10px;align-items:center}
+.members li b{font-family:var(--serif);color:var(--kola);font-size:17px;min-width:42px}
+@media(max-width:860px){.about-grid{grid-template-columns:1fr;gap:30px}.members ul{grid-template-columns:1fr}}
+
+/* RESEARCH */
+.research{background:var(--forest);color:var(--parchment);position:relative;overflow:hidden}
+.research .eyebrow{color:var(--gold)}
+.research h2 em{color:var(--gold)}
+.research-intro{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:end;margin-bottom:60px}
+.research-intro p{color:rgba(245,239,227,.75)}
+.focus{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-bottom:22px}
+.focus-card{border-radius:22px;padding:38px 34px;min-height:240px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden}
+.focus-card.kola{background:linear-gradient(160deg,#9c5a33,#5e2f18)}
+.focus-card.oil{background:linear-gradient(160deg,#c99a3e,#8d6420);color:var(--forest-deep)}
+.focus-card .tag{font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;opacity:.8;margin-bottom:10px}
+.focus-card h3{font-size:clamp(28px,3vw,38px)}
+.focus-card svg{position:absolute;right:-20px;top:-20px;width:190px;opacity:.18}
+.areas{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(245,239,227,.15);border-radius:22px;overflow:hidden}
+.area{background:var(--forest);padding:30px 26px}
+.area .n{font-family:var(--serif);color:var(--gold);font-size:15px}
+.area h4{font-family:var(--serif);font-weight:500;font-size:22px;margin:10px 0 8px}
+.area p{font-size:15px;color:rgba(245,239,227,.7)}
+@media(max-width:860px){.research-intro,.focus{grid-template-columns:1fr}.areas{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.areas{grid-template-columns:1fr}}
+
+/* PUBLICATIONS */
+.pubs-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:70px;align-items:start}
+.pubs-grid > div:first-child p{color:var(--muted);margin-top:20px}
+.profiles{display:flex;flex-direction:column;gap:14px}
+.profile{display:flex;align-items:center;justify-content:space-between;gap:20px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px 26px;text-decoration:none;transition:border-color .2s,transform .2s}
+.profile:hover{border-color:var(--kola);transform:translateX(6px)}
+.profile .logo{width:48px;height:48px;border-radius:12px;display:grid;place-items:center;font-family:var(--serif);font-weight:700;font-size:18px;color:#fff;flex-shrink:0}
+.profile .info{flex:1}
+.profile h4{font-family:var(--serif);font-weight:500;font-size:22px}
+.profile span{font-size:14px;color:var(--muted)}
+.profile .arrow{font-size:22px;color:var(--kola)}
+.kinds{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+.kinds span{background:var(--parchment);padding:8px 16px;border-radius:99px;font-size:14px;font-weight:500}
+@media(max-width:860px){.pubs-grid{grid-template-columns:1fr;gap:36px}}
+
+/* SPEAKING */
+.speaking{background:var(--parchment)}
+.speak-head{text-align:center;max-width:720px;margin:0 auto 56px}
+.speak-head p{color:var(--muted);margin-top:18px}
+.topics{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.topic{background:var(--cream);border-radius:22px;padding:32px 28px;border-top:4px solid var(--kola)}
+.topic:nth-child(2){border-top-color:var(--gold)}
+.topic:nth-child(3){border-top-color:var(--forest)}
+.topic h3{font-size:24px;margin-bottom:12px}
+.topic ul{list-style:none}
+.topic li{padding:10px 0;border-bottom:1px dashed var(--line);font-size:15px}
+.topic li:last-child{border:0}
+.sermon-cta{margin-top:40px;background:var(--forest-deep);color:var(--parchment);border-radius:24px;padding:40px;display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap}
+.sermon-cta h3{font-size:clamp(24px,3vw,32px)}
+.sermon-cta p{color:rgba(245,239,227,.7);margin-top:6px}
+@media(max-width:860px){.topics{grid-template-columns:1fr}.sermon-cta{padding:30px 24px}}
+
+/* CONTACT */
+.contact{background:var(--forest-deep);color:var(--parchment);text-align:center;position:relative;overflow:hidden}
+.contact::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 50% 70% at 50% 120%,rgba(201,154,62,.25),transparent 70%)}
+.contact .wrap{position:relative}
+.contact .eyebrow{color:var(--gold)}
+.contact h2{margin:18px auto 20px;max-width:780px}
+.contact h2 em{color:var(--gold)}
+.contact > .wrap > p{color:rgba(245,239,227,.72);max-width:520px;margin:0 auto 44px}
+.channels{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;max-width:960px;margin:0 auto}
+.channel{border:1px solid rgba(245,239,227,.18);border-radius:18px;padding:26px 18px;text-decoration:none;transition:background .2s,border-color .2s}
+.channel:hover{background:rgba(245,239,227,.06);border-color:var(--gold)}
+.channel small{display:block;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:8px}
+.channel b{font-weight:500;font-size:15px;word-break:break-word}
+@media(max-width:860px){.channels{grid-template-columns:1fr 1fr}}
+@media(max-width:420px){.channels{grid-template-columns:1fr}}
+footer{background:var(--forest-deep);color:rgba(245,239,227,.5);font-size:13px;text-align:center;padding:30px 20px;border-top:1px solid rgba(245,239,227,.1)}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s ease}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="wrap">
+    <a href="#top" class="mark">Dr. A. K. Omoniyi<span>.</span></a>
+    <button class="burger" id="burger" aria-label="Menu"><i></i><i></i><i></i></button>
+    <ul class="links" id="links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#speaking">Ministry &amp; Speaking</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <!-- hexagon / molecule motif -->
+  <svg class="hex-bg" viewBox="0 0 200 200" fill="none" stroke="#f5efe3" stroke-width="1.2">
+    <polygon points="100,20 150,49 150,107 100,136 50,107 50,49"/>
+    <polygon points="150,107 200,136 200,194 150,223 100,194 100,136"/>
+    <polygon points="50,107 100,136 100,194 50,223 0,194 0,136"/>
+    <circle cx="100" cy="20" r="5"/><circle cx="150" cy="49" r="5"/><circle cx="50" cy="49" r="5"/>
+    <line x1="100" y1="20" x2="100" y2="-20"/>
+  </svg>
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <div class="eyebrow">Scientist · Teacher · Shepherd</div>
+      <h1>Dr. Adebayo Kingsley <em>Omoniyi</em></h1>
+      <p class="lead">Connecting knowledge with impact, inspiring purposeful leadership, and empowering people to become the best version of themselves.</p>
+      <div class="roles">
+        <span>Lecturer</span><span>Researcher</span><span>Author</span><span>Youth Coach</span><span>Pastor</span><span>Speaker</span>
+      </div>
+      <div class="btns">
+        <a href="#speaking" class="btn btn-gold">Invite him to speak →</a>
+        <a href="#research" class="btn btn-ghost">Explore his research</a>
+      </div>
+    </div>
+    <div class="portrait reveal">
+      <div class="frame">
+        <img src="portrait.jpg" alt="Portrait of Dr. Adebayo Kingsley Omoniyi">
+      </div>
+      <div class="badge"><b>Lab &amp; Pulpit</b>Where scientific discovery meets purposeful faith</div>
+    </div>
+  </div>
+</header>
+
+<div class="verse">
+  <div class="wrap">
+    <p>“Wisdom is the principal thing; therefore get wisdom: and with all thy getting get understanding.”</p>
+    <small>Proverbs 4:7</small>
+  </div>
+</div>
+
+<section id="callings">
+  <div class="wrap">
+    <div class="callings-head reveal">
+      <div>
+        <div class="eyebrow">One life, three callings</div>
+        <h2>Knowledge that <em>serves</em> people.</h2>
+      </div>
+      <p>Whether in the laboratory, the lecture hall or the sanctuary, his work comes back to one question: how can what we know change how people live?</p>
+    </div>
+    <div class="trio">
+      <div class="call reveal">
+        <span class="num">01</span>
+        <svg viewBox="0 0 48 48"><path d="M18 6h12M20 6v14L9 38a4 4 0 0 0 3.5 6h23a4 4 0 0 0 3.5-6L28 20V6"/><path d="M14 30h20"/></svg>
+        <h3>The Scientist</h3>
+        <p>Researching natural products, phytochemistry and the quality and safety of the food people eat every day.</p>
+      </div>
+      <div class="call reveal">
+        <span class="num">02</span>
+        <svg viewBox="0 0 48 48"><path d="M24 8v32M14 18h20"/><path d="M8 40h32"/></svg>
+        <h3>The Pastor</h3>
+        <p>Shepherding people through pastoral ministry, preaching and teaching with conviction, care and clarity.</p>
+      </div>
+      <div class="call reveal">
+        <span class="num">03</span>
+        <svg viewBox="0 0 48 48"><circle cx="24" cy="14" r="6"/><path d="M12 42c0-7 5-12 12-12s12 5 12 12"/><path d="M36 10l4-4M40 16h4"/></svg>
+        <h3>The Coach</h3>
+        <p>Raising purposeful young people through mentoring, coaching and youth conferences that build character and leadership.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div class="reveal">
+      <div class="eyebrow">About</div>
+      <h2>A passion for <em>discovery</em> and for people.</h2>
+    </div>
+    <div class="about-text reveal">
+      <p>Dr. Adebayo Kingsley Omoniyi is a lecturer, researcher, author, youth coach, pastor and youth conference speaker, driven by a passion for scientific discovery, education, leadership, youth development, faith and societal transformation.</p>
+      <p>Beyond academia, he is committed to raising purposeful young people through teaching, mentoring, coaching, conference speaking and pastoral ministry, helping individuals grow in knowledge, character, leadership capacity and a strong sense of purpose.</p>
+      <div class="members">
+        <div class="eyebrow">Professional memberships</div>
+        <ul>
+          <li><b>ACS</b>American Chemical Society</li>
+          <li><b>RSC</b>Royal Society of Chemistry</li>
+          <li><b>CSN</b>Chemical Society of Nigeria</li>
+          <li><b>SAN</b>Science Association of Nigeria</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="research" id="research">
+  <div class="wrap">
+    <div class="research-intro reveal">
+      <div>
+        <div class="eyebrow">Research</div>
+        <h2>From the <em>kola nut</em> to the kitchen shelf.</h2>
+      </div>
+      <p>His scholarly work explores the chemistry of plants native to West Africa and the safety of everyday foods, with research on <i>Garcinia kola</i> and the quality and safety of commercial vegetable oils.</p>
+    </div>
+    <div class="focus reveal">
+      <div class="focus-card kola">
+        <svg viewBox="0 0 100 100" fill="#fff"><ellipse cx="50" cy="50" rx="34" ry="42"/></svg>
+        <div class="tag">Focus study</div>
+        <h3><i>Garcinia kola</i></h3>
+        <p style="opacity:.8;margin-top:8px">Bitter kola: bioactive compounds and their potential.</p>
+      </div>
+      <div class="focus-card oil">
+        <svg viewBox="0 0 100 100" fill="#132620"><path d="M50 8C50 8 20 46 20 64a30 30 0 0 0 60 0C80 46 50 8 50 8z"/></svg>
+        <div class="tag">Focus study</div>
+        <h3>Commercial vegetable oils</h3>
+        <p style="opacity:.8;margin-top:8px">Quality and safety of oils on the market.</p>
+      </div>
+    </div>
+    <div class="areas reveal">
+      <div class="area"><span class="n">i.</span><h4>Phytochemistry</h4><p>Natural products and plant-based bioactive compounds.</p></div>
+      <div class="area"><span class="n">ii.</span><h4>Antioxidant activity</h4><p>Evaluating antioxidant and antimicrobial potential.</p></div>
+      <div class="area"><span class="n">iii.</span><h4>GC-MS profiling</h4><p>Chemical profiling and characterisation of extracts.</p></div>
+      <div class="area"><span class="n">iv.</span><h4>Food quality &amp; safety</h4><p>Nutritional, physicochemical and microbiological assessment.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="publications">
+  <div class="wrap pubs-grid">
+    <div class="reveal">
+      <div class="eyebrow">Publications</div>
+      <h2>Read the <em>work</em>.</h2>
+      <p>Journal articles, books and other writing, kept up to date on his scholarly profiles.</p>
+      <div class="kinds"><span>Journal articles</span><span>Books</span><span>Other publications</span></div>
+    </div>
+    <div class="profiles reveal">
+      <a class="profile" href="https://scholar.google.com/citations?user=H9EySR8AAAJ" target="_blank" rel="noopener">
+        <div class="logo" style="background:#4285f4">G</div>
+        <div class="info"><h4>Google Scholar</h4><span>Citations and full publication list</span></div>
+        <div class="arrow">→</div>
+      </a>
+      <a class="profile" href="https://www.researchgate.net/profile/Kingsley-Adebayo" target="_blank" rel="noopener">
+        <div class="logo" style="background:#00a98f">RG</div>
+        <div class="info"><h4>ResearchGate</h4><span>Papers, data and collaboration</span></div>
+        <div class="arrow">→</div>
+      </a>
+      <a class="profile" href="https://orcid.org/0009-0004-5479-2442" target="_blank" rel="noopener">
+        <div class="logo" style="background:#a6ce39">iD</div>
+        <div class="info"><h4>ORCID</h4><span>0009-0004-5479-2442</span></div>
+        <div class="arrow">→</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="speaking" id="speaking">
+  <div class="wrap">
+    <div class="speak-head reveal">
+      <div class="eyebrow">Ministry &amp; speaking</div>
+      <h2>Bring him to your <em>platform</em>.</h2>
+      <p>Available for lectures, youth conferences, church programmes, mentoring sessions and academic collaboration.</p>
+    </div>
+    <div class="topics">
+      <div class="topic reveal">
+        <h3>Youth &amp; purpose</h3>
+        <ul><li>Youth conferences</li><li>Mentoring &amp; coaching</li><li>Leadership development</li></ul>
+      </div>
+      <div class="topic reveal">
+        <h3>Faith &amp; ministry</h3>
+        <ul><li>Preaching &amp; teaching</li><li>Church programmes</li><li>Faith and purposeful living</li></ul>
+      </div>
+      <div class="topic reveal">
+        <h3>Science &amp; education</h3>
+        <ul><li>Guest lectures</li><li>Natural products &amp; food safety</li><li>Research collaboration</li></ul>
+      </div>
+    </div>
+    <div class="sermon-cta reveal">
+      <div>
+        <h3>Sermons &amp; messages</h3>
+        <p>Recorded messages will be shared here. Reach out to request a sermon or invite him to minister.</p>
+      </div>
+      <a href="#contact" class="btn btn-gold">Request a message</a>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="eyebrow">Contact</div>
+    <h2>Let’s build something <em>purposeful</em> together.</h2>
+    <p>For lectures, speaking engagements, mentoring and collaboration.</p>
+    <div class="channels">
+      <a class="channel" href="mailto:kingsbayo14@gmail.com"><small>Email</small><b>kingsbayo14@gmail.com</b></a>
+      <a class="channel" href="tel:+2348075362005"><small>Phone</small><b>0807 536 2005</b></a>
+      <a class="channel" href="https://wa.me/2348075362005" target="_blank" rel="noopener"><small>WhatsApp</small><b>Message him</b></a>
+      <a class="channel" href="https://www.linkedin.com/in/kingsley-adebayo-04629a290" target="_blank" rel="noopener"><small>LinkedIn</small><b>Connect</b></a>
+    </div>
+  </div>
+</section>
+
+<footer>© <span id="yr"></span> Dr. Adebayo Kingsley Omoniyi. All rights reserved.</footer>
+
+<script>
+const nav=document.getElementById('nav'),links=document.getElementById('links');
+const onScroll=()=>nav.classList.toggle('solid',window.scrollY>40||links.classList.contains('open'));
+window.addEventListener('scroll',onScroll);onScroll();
+document.getElementById('burger').onclick=()=>{links.classList.toggle('open');onScroll()};
+links.querySelectorAll('a').forEach(a=>a.onclick=()=>{links.classList.remove('open');onScroll()});
+document.getElementById('yr').textContent=new Date().getFullYear();
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
