@@ -179,6 +179,23 @@ section{padding:110px 0}
 .topic ul{list-style:none}
 .topic li{padding:10px 0;border-bottom:1px dashed var(--line);font-size:15px}
 .topic li:last-child{border:0}
+.sub-h{font-size:clamp(24px,3vw,32px);color:var(--forest);margin:56px 0 20px}
+.ev-list{list-style:none;display:grid;gap:12px}
+.ev{display:grid;grid-template-columns:90px 1fr;gap:20px;align-items:center;background:var(--cream);border-radius:16px;padding:18px 22px}
+.ev>div{min-width:0}
+.ev-date{font-family:var(--serif);color:var(--kola);text-align:center;line-height:1.1}
+.ev-date b{display:block;font-size:30px;font-weight:600}
+.ev-date span{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-family:var(--sans);font-weight:600}
+.ev h4{font-family:var(--serif);font-weight:500;font-size:20px}
+.ev p{font-size:14px;color:var(--muted)}
+.sermon-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+.sermon{background:var(--forest-deep);color:var(--parchment);border-radius:18px;padding:26px;display:flex;flex-direction:column;gap:8px;text-decoration:none;min-width:0;transition:transform .2s}
+a.sermon:hover{transform:translateY(-4px)}
+.sermon .s-meta{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600}
+.sermon h4{font-family:var(--serif);font-weight:500;font-size:22px;line-height:1.25}
+.sermon p{font-size:14.5px;color:rgba(245,239,227,.72)}
+.sermon .s-go{margin-top:auto;padding-top:8px;color:var(--gold);font-weight:600;font-size:14px}
+@media(max-width:600px){.ev{grid-template-columns:64px 1fr;gap:14px}}
 .sermon-cta{margin-top:40px;background:var(--forest-deep);color:var(--parchment);border-radius:24px;padding:40px;display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap}
 .sermon-cta h3{font-size:clamp(24px,3vw,32px)}
 .sermon-cta p{color:rgba(245,239,227,.7);margin-top:6px}
@@ -236,7 +253,7 @@ footer{background:var(--forest-deep);color:rgba(245,239,227,.5);font-size:13px;t
     <div class="reveal">
       <div class="eyebrow">Scientist · Teacher · Shepherd</div>
       <h1>Dr. Adebayo Kingsley <em>Omoniyi</em></h1>
-      <p class="lead">Connecting knowledge with impact, inspiring purposeful leadership, and empowering people to become the best version of themselves.</p>
+      <p class="lead" id="tagline">Connecting knowledge with impact, inspiring purposeful leadership, and empowering people to become the best version of themselves.</p>
       <div class="roles">
         <span>Lecturer</span><span>Researcher</span><span>Author</span><span>Youth Coach</span><span>Pastor</span><span>Speaker</span>
       </div>
@@ -247,7 +264,7 @@ footer{background:var(--forest-deep);color:rgba(245,239,227,.5);font-size:13px;t
     </div>
     <div class="portrait reveal">
       <div class="frame">
-        <img src="portrait.jpg" alt="Portrait of Dr. Adebayo Kingsley Omoniyi">
+        <img id="photo" src="portrait.jpg" alt="Portrait of Dr. Adebayo Kingsley Omoniyi">
       </div>
       <div class="badge"><b>Lab &amp; Pulpit</b>Where scientific discovery meets purposeful faith</div>
     </div>
@@ -352,7 +369,7 @@ footer{background:var(--forest-deep);color:rgba(245,239,227,.5);font-size:13px;t
     <div class="reveal">
       <div class="eyebrow">Publications</div>
       <h2>Read the <em>work</em>.</h2>
-      <p>14 peer-reviewed journal articles on medicinal plants, natural products and food and water safety in Nigeria, with full profiles on Google Scholar, ResearchGate and ORCID.</p>
+      <p><span id="pub-count">14</span> peer-reviewed journal articles on medicinal plants, natural products and food and water safety in Nigeria, with full profiles on Google Scholar, ResearchGate and ORCID.</p>
       <div class="kinds"><span>Journal articles</span><span>Books</span><span>Other publications</span></div>
     </div>
     <div class="profiles reveal">
@@ -375,8 +392,8 @@ footer{background:var(--forest-deep);color:rgba(245,239,227,.5);font-size:13px;t
   </div>
 
 <div class="wrap publist reveal">
-  <div class="pl-head"><h3>Selected journal articles</h3><span>14 articles · 2020–2026</span></div>
-  <ol class="pubs"><li class="pub"><span class="py">2026</span><div><h4>Hydrochemical, heavy metal, and microbiological safety assessment of groundwater sources in Federal University Lokoja, Nigeria</h4><p class="pa"><b>Kingsley Omoniyi Adebayo</b>, T. Bamigbola, B. A. Ibiejemite, R. J. Ahmed, H. O. John-Nwagwu, G. Maiyaki</p><p class="pj">Dutse Journal of Pure and Applied Sciences (DUJOPAS), Vol. 12, No. 3, 152</p></div></li><li class="pub"><span class="py">2026</span><div><h4>Phytochemical profiling, GC-MS analysis, antioxidant and antimicrobial activities of ethanolic and aqueous leaf extracts of <i>Carica papaya</i></h4><p class="pa"><b>Kingsley Omoniyi Adebayo</b>, E. A. Taiwo, B. A. Ibiejemite, R. J. Ahmed, J. Ahmed</p><p class="pj">Dutse Journal of Pure and Applied Sciences (DUJOPAS), Vol. 12, No. 3, 153</p></div></li><li class="pub"><span class="py">2026</span><div><h4><a href="https://www.researchgate.net/publication/414286180" target="_blank" rel="noopener">Evaluation of the comparative quality and safety of selected commercial vegetable oils in Lokoja, Kogi State, Nigeria: Integrating Physicochemical, Nutritional, and Microbiological Assessments <span class="go">↗</span></a></h4><p class="pa"><b>K. O. Adebayo</b>, B. A. Ibiejemite, S. O. Ayika, E. A. Taiwo, S. O. Achimugu, G. E. Abuede</p><p class="pj">FUDMA Journal of Sciences, Vol. 10, No. 16, 735–740</p></div></li><li class="pub"><span class="py">2026</span><div><h4>GC-MS based phytochemical profiling and complementary antioxidant activities of ethanol extract of <i>Garcinia kola</i> seeds collected from Kogi State, Nigeria</h4><p class="pa"><b>K. O. Adebayo</b>, G. S. F. Ohunene, E. A. Taiwo, B. A. Ibiejemite, R. J. Ahmed</p><p class="pj">FUDMA Journal of Sciences, FJS2026-10-10-121</p></div></li><li class="pub"><span class="py">2026</span><div><h4><a href="https://www.researchgate.net/publication/410614988" target="_blank" rel="noopener">Proximate Analysis, Anti-Nutritional Screening, and Mineral Profiling of <i>Calotropis procera</i> Leaf Extract <span class="go">↗</span></a></h4><p class="pa"><b>K. Adebayo</b>, I. G. Osigbemhe, A. S. Edo-Eje</p><p class="pj">Dutse Journal of Pure and Applied Sciences (DUJOPAS), Vol. 12, No. 1e, March 2026</p></div></li><li class="pub"><span class="py">2026</span><div><h4><a href="https://www.researchgate.net/publication/403596834" target="_blank" rel="noopener">A Comprehensive Review of the proximate composition, mineral constituent, antinutrients, phytochemical and pharmacological profile of <i>Parquetina nigrescens</i> (Apocynaceae) <span class="go">↗</span></a></h4><p class="pa"><b>K. O. Adebayo</b>, Y. Isah, M. E. Khan</p><p class="pj">Bayero Journal of Pure and Applied Science, Vol. 18(2), December 2025</p></div></li><li class="pub"><span class="py">2025</span><div><h4><a href="https://www.researchgate.net/publication/403596553" target="_blank" rel="noopener">Comparative antioxidant potential, brine shrimp lethality assay and GC-MS profile of crude ethanolic extract and chloroform fraction of <i>Parquetina nigrescens</i> leaves <span class="go">↗</span></a></h4><p class="pa"><b>K. O. Adebayo</b>, Y. Isah, M. E. Khan, S. Abdullahi</p><p class="pj">Bayero Journal of Pure and Applied Science, Vol. 18(2), 274–292</p></div></li><li class="pub"><span class="py">2025</span><div><h4><a href="https://www.researchgate.net/publication/403596720" target="_blank" rel="noopener">Phytochemical Screening and Comparative Brine Shrimp Cytotoxicity Evaluation of Ethanolic Crude Extract and Fractions of <i>Parquetina nigrescens</i> Leaves <span class="go">↗</span></a></h4><p class="pa"><b>K. O. Adebayo</b>, Y. Isah, M. E. Khan</p><p class="pj">FUDMA Journal of Sciences, Vol. 9, No. 12 (Special Issue), 382–392</p></div></li><li class="pub"><span class="py">2025</span><div><h4><a href="https://www.researchgate.net/publication/414542072" target="_blank" rel="noopener">Investigation of Mineral Composition, Proximate Constituents, Anti-Nutritional Factor, Antimicrobial Activities and Phytochemical Screening of Aqueous Extract of <i>Tamarindus indica</i> Seed <span class="go">↗</span></a></h4><p class="pa">I. G. Osigbemhe, <b>K. O. Adebayo</b>, P. Amedu</p><p class="pj">Journal of Applied Sciences, Computing and Energy, 3(1), 01–19</p></div></li><li class="pub"><span class="py">2025</span><div><h4><a href="https://www.researchgate.net/publication/393674536" target="_blank" rel="noopener">In Silico ADMET Prediction, Molecular Docking Studies, Partial Characterization, Antioxidant, and Antifungal Properties of Active Molecules from <i>Persea americana</i> (Avocado) Pulp Oil <span class="go">↗</span></a></h4><p class="pa">M. E. Khan, <b>K. O. Adebayo</b>, G. O. Izuagbe, W. O. Anthony, N. O. Ugbenyo, A. A. Monday, M. K. Yahaya, F. Umar, J. G. Oyiza, A. Amina, A. C. Ohirunameh, M. I. Ohiole</p><p class="pj">Journal of Phytomedicine and Therapeutics (JOPAT), Vol. 24(1), 1827–1846 (Scopus indexed)</p></div></li><li class="pub"><span class="py">2025</span><div><h4><a href="https://www.researchgate.net/publication/390259603" target="_blank" rel="noopener">Phytochemical, Nutritional, Anti-Nutritional Evaluation and Antimicrobial Analysis of <i>Pleurotus ostreatus</i> from Oshogbo in Osun State, Nigeria <span class="go">↗</span></a></h4><p class="pa">M. E. Khan, <b>K. O. Adebayo</b>, Y. Sikiratu, I. N. Oyeza, H. Aliyu, S. O. Genevieve, G. O. Izuagbe, A. Alexander, M. K. Yahaya, N. O. Ugbenyo, A. A. Monday</p><p class="pj">Dutse Journal of Pure and Applied Sciences (DUJOPAS), 291–301</p></div></li><li class="pub"><span class="py">2024</span><div><h4><a href="https://www.researchgate.net/publication/406459815" target="_blank" rel="noopener">Comparative Anti-Diabetic Effects of Ethanol Extracts from Leaves, Seeds and Pods of <i>Moringa oleifera</i> on Alloxan Induced Diabetic Rats <span class="go">↗</span></a></h4><p class="pa"><b>K. O. Adebayo</b>, M. A. Owolabi, M. E. Khan</p><p class="pj">FUDMA Journal of Sciences, Vol. 8, No. 6, 128–136</p></div></li><li class="pub"><span class="py">2023</span><div><h4><a href="https://www.researchgate.net/publication/370447314" target="_blank" rel="noopener">Comparative Proximate Composition, Anti-Nutritional Analyses and Antimicrobial Screening of Some Medicinal Plants <span class="go">↗</span></a></h4><p class="pa">M. E. Khan, <b>K. O. Adebayo</b>, G. Osigbemhe</p><p class="pj">FUDMA Journal of Sciences, Vol. 7, No. 2, 159–163</p></div></li><li class="pub"><span class="py">2020</span><div><h4><a href="https://www.researchgate.net/publication/343298385" target="_blank" rel="noopener">Evaluation of Anti-Diabetic Potentials and Biochemical Parameters of Aqueous Pod Extract of <i>Moringa oleifera</i> in Alloxan Induced Diabetic Rats <span class="go">↗</span></a></h4><p class="pa">M. A. Owolabi, <b>Kingsley O. Adebayo</b>, C. O. Ogah, E. M. Soremi</p><p class="pj">Tropical Journal of Natural Product Research, 4(2), 50–57 (Scopus)</p></div></li></ol>
+  <div class="pl-head"><h3>Selected journal articles</h3><span id="pub-meta">14 articles · 2020–2026</span></div>
+  <ol class="pubs" id="pub-list"><li class="pub"><span class="py">2026</span><div><h4>Hydrochemical, heavy metal, and microbiological safety assessment of groundwater sources in Federal University Lokoja, Nigeria</h4><p class="pa"><b>Kingsley Omoniyi Adebayo</b>, T. Bamigbola, B. A. Ibiejemite, R. J. Ahmed, H. O. John-Nwagwu, G. Maiyaki</p><p class="pj">Dutse Journal of Pure and Applied Sciences (DUJOPAS), Vol. 12, No. 3, 152</p></div></li><li class="pub"><span class="py">2026</span><div><h4>Phytochemical profiling, GC-MS analysis, antioxidant and antimicrobial activities of ethanolic and aqueous leaf extracts of <i>Carica papaya</i></h4><p class="pa"><b>Kingsley Omoniyi Adebayo</b>, E. A. Taiwo, B. A. Ibiejemite, R. J. Ahmed, J. Ahmed</p><p class="pj">Dutse Journal of Pure and Applied Sciences (DUJOPAS), Vol. 12, No. 3, 153</p></div></li><li class="pub"><span class="py">2026</span><div><h4><a href="https://www.researchgate.net/publication/414286180" target="_blank" rel="noopener">Evaluation of the comparative quality and safety of selected commercial vegetable oils in Lokoja, Kogi State, Nigeria: Integrating Physicochemical, Nutritional, and Microbiological Assessments <span class="go">↗</span></a></h4><p class="pa"><b>K. O. Adebayo</b>, B. A. Ibiejemite, S. O. Ayika, E. A. Taiwo, S. O. Achimugu, G. E. Abuede</p><p class="pj">FUDMA Journal of Sciences, Vol. 10, No. 16, 735–740</p></div></li><li class="pub"><span class="py">2026</span><div><h4>GC-MS based phytochemical profiling and complementary antioxidant activities of ethanol extract of <i>Garcinia kola</i> seeds collected from Kogi State, Nigeria</h4><p class="pa"><b>K. O. Adebayo</b>, G. S. F. Ohunene, E. A. Taiwo, B. A. Ibiejemite, R. J. Ahmed</p><p class="pj">FUDMA Journal of Sciences, FJS2026-10-10-121</p></div></li><li class="pub"><span class="py">2026</span><div><h4><a href="https://www.researchgate.net/publication/410614988" target="_blank" rel="noopener">Proximate Analysis, Anti-Nutritional Screening, and Mineral Profiling of <i>Calotropis procera</i> Leaf Extract <span class="go">↗</span></a></h4><p class="pa"><b>K. Adebayo</b>, I. G. Osigbemhe, A. S. Edo-Eje</p><p class="pj">Dutse Journal of Pure and Applied Sciences (DUJOPAS), Vol. 12, No. 1e, March 2026</p></div></li><li class="pub"><span class="py">2026</span><div><h4><a href="https://www.researchgate.net/publication/403596834" target="_blank" rel="noopener">A Comprehensive Review of the proximate composition, mineral constituent, antinutrients, phytochemical and pharmacological profile of <i>Parquetina nigrescens</i> (Apocynaceae) <span class="go">↗</span></a></h4><p class="pa"><b>K. O. Adebayo</b>, Y. Isah, M. E. Khan</p><p class="pj">Bayero Journal of Pure and Applied Science, Vol. 18(2), December 2025</p></div></li><li class="pub"><span class="py">2025</span><div><h4><a href="https://www.researchgate.net/publication/403596553" target="_blank" rel="noopener">Comparative antioxidant potential, brine shrimp lethality assay and GC-MS profile of crude ethanolic extract and chloroform fraction of <i>Parquetina nigrescens</i> leaves <span class="go">↗</span></a></h4><p class="pa"><b>K. O. Adebayo</b>, Y. Isah, M. E. Khan, S. Abdullahi</p><p class="pj">Bayero Journal of Pure and Applied Science, Vol. 18(2), 274–292</p></div></li><li class="pub"><span class="py">2025</span><div><h4><a href="https://www.researchgate.net/publication/403596720" target="_blank" rel="noopener">Phytochemical Screening and Comparative Brine Shrimp Cytotoxicity Evaluation of Ethanolic Crude Extract and Fractions of <i>Parquetina nigrescens</i> Leaves <span class="go">↗</span></a></h4><p class="pa"><b>K. O. Adebayo</b>, Y. Isah, M. E. Khan</p><p class="pj">FUDMA Journal of Sciences, Vol. 9, No. 12 (Special Issue), 382–392</p></div></li><li class="pub"><span class="py">2025</span><div><h4><a href="https://www.researchgate.net/publication/414542072" target="_blank" rel="noopener">Investigation of Mineral Composition, Proximate Constituents, Anti-Nutritional Factor, Antimicrobial Activities and Phytochemical Screening of Aqueous Extract of <i>Tamarindus indica</i> Seed <span class="go">↗</span></a></h4><p class="pa">I. G. Osigbemhe, <b>K. O. Adebayo</b>, P. Amedu</p><p class="pj">Journal of Applied Sciences, Computing and Energy, 3(1), 01–19</p></div></li><li class="pub"><span class="py">2025</span><div><h4><a href="https://www.researchgate.net/publication/393674536" target="_blank" rel="noopener">In Silico ADMET Prediction, Molecular Docking Studies, Partial Characterization, Antioxidant, and Antifungal Properties of Active Molecules from <i>Persea americana</i> (Avocado) Pulp Oil <span class="go">↗</span></a></h4><p class="pa">M. E. Khan, <b>K. O. Adebayo</b>, G. O. Izuagbe, W. O. Anthony, N. O. Ugbenyo, A. A. Monday, M. K. Yahaya, F. Umar, J. G. Oyiza, A. Amina, A. C. Ohirunameh, M. I. Ohiole</p><p class="pj">Journal of Phytomedicine and Therapeutics (JOPAT), Vol. 24(1), 1827–1846 (Scopus indexed)</p></div></li><li class="pub"><span class="py">2025</span><div><h4><a href="https://www.researchgate.net/publication/390259603" target="_blank" rel="noopener">Phytochemical, Nutritional, Anti-Nutritional Evaluation and Antimicrobial Analysis of <i>Pleurotus ostreatus</i> from Oshogbo in Osun State, Nigeria <span class="go">↗</span></a></h4><p class="pa">M. E. Khan, <b>K. O. Adebayo</b>, Y. Sikiratu, I. N. Oyeza, H. Aliyu, S. O. Genevieve, G. O. Izuagbe, A. Alexander, M. K. Yahaya, N. O. Ugbenyo, A. A. Monday</p><p class="pj">Dutse Journal of Pure and Applied Sciences (DUJOPAS), 291–301</p></div></li><li class="pub"><span class="py">2024</span><div><h4><a href="https://www.researchgate.net/publication/406459815" target="_blank" rel="noopener">Comparative Anti-Diabetic Effects of Ethanol Extracts from Leaves, Seeds and Pods of <i>Moringa oleifera</i> on Alloxan Induced Diabetic Rats <span class="go">↗</span></a></h4><p class="pa"><b>K. O. Adebayo</b>, M. A. Owolabi, M. E. Khan</p><p class="pj">FUDMA Journal of Sciences, Vol. 8, No. 6, 128–136</p></div></li><li class="pub"><span class="py">2023</span><div><h4><a href="https://www.researchgate.net/publication/370447314" target="_blank" rel="noopener">Comparative Proximate Composition, Anti-Nutritional Analyses and Antimicrobial Screening of Some Medicinal Plants <span class="go">↗</span></a></h4><p class="pa">M. E. Khan, <b>K. O. Adebayo</b>, G. Osigbemhe</p><p class="pj">FUDMA Journal of Sciences, Vol. 7, No. 2, 159–163</p></div></li><li class="pub"><span class="py">2020</span><div><h4><a href="https://www.researchgate.net/publication/343298385" target="_blank" rel="noopener">Evaluation of Anti-Diabetic Potentials and Biochemical Parameters of Aqueous Pod Extract of <i>Moringa oleifera</i> in Alloxan Induced Diabetic Rats <span class="go">↗</span></a></h4><p class="pa">M. A. Owolabi, <b>Kingsley O. Adebayo</b>, C. O. Ogah, E. M. Soremi</p><p class="pj">Tropical Journal of Natural Product Research, 4(2), 50–57 (Scopus)</p></div></li></ol>
 </div>
 </section>
 
@@ -401,8 +418,16 @@ footer{background:var(--forest-deep);color:rgba(245,239,227,.5);font-size:13px;t
         <ul><li>Guest lectures</li><li>Natural products &amp; food safety</li><li>Research collaboration</li></ul>
       </div>
     </div>
+    <div class="events" id="events" hidden>
+      <h3 class="sub-h">Upcoming engagements</h3>
+      <ul class="ev-list" id="event-list"></ul>
+    </div>
+    <div class="sermons" id="sermons" hidden>
+      <h3 class="sub-h">Sermons &amp; messages</h3>
+      <div class="sermon-grid" id="sermon-list"></div>
+    </div>
     <div class="sermon-cta reveal">
-      <div>
+      <div id="cta-text">
         <h3>Sermons &amp; messages</h3>
         <p>Recorded messages will be shared here. Reach out to request a sermon or invite him to minister.</p>
       </div>
@@ -417,10 +442,10 @@ footer{background:var(--forest-deep);color:rgba(245,239,227,.5);font-size:13px;t
     <h2>Let’s build something <em>purposeful</em> together.</h2>
     <p>For lectures, speaking engagements, mentoring and collaboration.</p>
     <div class="channels">
-      <a class="channel" href="mailto:kingsbayo14@gmail.com"><small>Email</small><b>kingsbayo14@gmail.com</b></a>
-      <a class="channel" href="tel:+2348075362005"><small>Phone</small><b>0807 536 2005</b></a>
-      <a class="channel" href="https://wa.me/2348075362005" target="_blank" rel="noopener"><small>WhatsApp</small><b>Message him</b></a>
-      <a class="channel" href="https://www.linkedin.com/in/kingsley-adebayo-04629a290" target="_blank" rel="noopener"><small>LinkedIn</small><b>Connect</b></a>
+      <a class="channel" id="c-email" href="mailto:kingsbayo14@gmail.com"><small>Email</small><b>kingsbayo14@gmail.com</b></a>
+      <a class="channel" id="c-phone" href="tel:+2348075362005"><small>Phone</small><b>0807 536 2005</b></a>
+      <a class="channel" id="c-wa" href="https://wa.me/2348075362005" target="_blank" rel="noopener"><small>WhatsApp</small><b>Message him</b></a>
+      <a class="channel" id="c-li" href="https://www.linkedin.com/in/kingsley-adebayo-04629a290" target="_blank" rel="noopener"><small>LinkedIn</small><b>Connect</b></a>
     </div>
   </div>
 </section>
@@ -436,6 +461,49 @@ links.querySelectorAll('a').forEach(a=>a.onclick=()=>{links.classList.remove('op
 document.getElementById('yr').textContent=new Date().getFullYear();
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// ---- Editable content (managed through the admin panel) ----
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const ital=s=>esc(s).replace(/\*([^*]+)\*/g,'<i>$1</i>');
+const safeUrl=u=>/^https?:\/\//i.test(u||'')?u:'';
+const bold=s=>esc(s).replace(/(Kingsley Omoniyi Adebayo|Kingsley O\. Adebayo|K\. O\. Adebayo|K\. Adebayo|Kingsley Adebayo)/g,'<b>$1</b>');
+const M=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const fmt=d=>{const t=new Date(d);return isNaN(t)?'':t.getDate()+' '+M[t.getMonth()]+' '+t.getFullYear()};
+const get=p=>fetch(p,{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null);
+(async()=>{
+  const [site,pubs,serm,evs]=await Promise.all(['content/site.json','content/publications.json','content/sermons.json','content/events.json'].map(get));
+  if(site){
+    if(site.tagline)document.getElementById('tagline').textContent=site.tagline;
+    if(site.photo)document.getElementById('photo').src=site.photo.replace(/^\//,'');
+    if(site.email){const a=document.getElementById('c-email');a.href='mailto:'+site.email;a.querySelector('b').textContent=site.email}
+    if(site.phone){const a=document.getElementById('c-phone');a.href='tel:'+site.phone.replace(/[^+\d]/g,'');a.querySelector('b').textContent=site.phone}
+    if(site.whatsapp)document.getElementById('c-wa').href='https://wa.me/'+site.whatsapp.replace(/\D/g,'');
+    if(safeUrl(site.linkedin))document.getElementById('c-li').href=site.linkedin;
+  }
+  if(pubs&&pubs.items&&pubs.items.length){
+    const it=[...pubs.items].sort((a,b)=>(b.year||0)-(a.year||0));
+    document.getElementById('pub-list').innerHTML=it.map(p=>{const u=safeUrl(p.link);const t=ital(p.title);
+      return `<li class="pub"><span class="py">${esc(p.year)}</span><div><h4>${u?`<a href="${esc(u)}" target="_blank" rel="noopener">${t} <span class="go">↗</span></a>`:t}</h4><p class="pa">${bold(p.authors)}</p><p class="pj">${esc(p.journal)}</p></div></li>`}).join('');
+    const ys=it.map(p=>p.year).filter(Boolean);
+    document.getElementById('pub-count').textContent=it.length;
+    document.getElementById('pub-meta').textContent=`${it.length} articles · ${Math.min(...ys)}–${Math.max(...ys)}`;
+  }
+  if(serm&&serm.items&&serm.items.length){
+    document.getElementById('sermon-list').innerHTML=serm.items.map(s=>{const u=safeUrl(s.link);const tag=u?'a':'div';
+      return `<${tag} class="sermon"${u?` href="${esc(u)}" target="_blank" rel="noopener"`:''}><span class="s-meta">${esc([fmt(s.date),s.scripture].filter(Boolean).join(' · '))}</span><h4>${esc(s.title)}</h4>${s.summary?`<p>${esc(s.summary)}</p>`:''}${u?'<span class="s-go">Watch / listen →</span>':''}</${tag}>`}).join('');
+    document.getElementById('sermons').hidden=false;
+    document.getElementById('cta-text').innerHTML='<h3>Invite him to minister</h3><p>For church programmes, youth conferences and special services, get in touch.</p>';
+  }
+  if(evs&&evs.items&&evs.items.length){
+    const today=new Date();today.setHours(0,0,0,0);
+    const up=evs.items.filter(e=>!e.date||new Date(e.date)>=today);
+    if(up.length){
+      document.getElementById('event-list').innerHTML=up.map(e=>{const t=new Date(e.date);const u=safeUrl(e.link);
+        return `<li class="ev"><div class="ev-date">${isNaN(t)?'<b>—</b>':`<b>${t.getDate()}</b><span>${M[t.getMonth()]} ${t.getFullYear()}</span>`}</div><div><h4>${u?`<a href="${esc(u)}" target="_blank" rel="noopener">${esc(e.title)}</a>`:esc(e.title)}</h4><p>${esc([e.role,e.location].filter(Boolean).join(' · '))}</p></div></li>`}).join('');
+      document.getElementById('events').hidden=false;
+    }
+  }
+})();
 </script>
 </body>
 </html>

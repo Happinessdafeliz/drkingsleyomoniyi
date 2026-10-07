@@ -1,0 +1,64 @@
+media:
+  input: images
+  output: /images
+
+content:
+  - name: sermons
+    label: Sermons & Messages
+    type: file
+    path: content/sermons.json
+    fields:
+      - name: items
+        label: Sermons (newest first)
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Title, type: string, required: true }
+          - { name: date, label: Date, type: date }
+          - { name: scripture, label: Bible text, type: string }
+          - { name: summary, label: Short summary, type: text }
+          - { name: link, label: Video or audio link (YouTube, Facebook, Spotify), type: string }
+
+  - name: events
+    label: Events & Engagements
+    type: file
+    path: content/events.json
+    fields:
+      - name: items
+        label: Events (soonest first)
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Event, type: string, required: true }
+          - { name: date, label: Date, type: date }
+          - { name: location, label: Venue / city, type: string }
+          - { name: role, label: His role (e.g. Guest speaker), type: string }
+          - { name: link, label: Link (optional), type: string }
+
+  - name: publications
+    label: Publications
+    type: file
+    path: content/publications.json
+    fields:
+      - name: items
+        label: Journal articles (newest first). Put plant names between *stars* to show them in italics.
+        type: object
+        list: true
+        fields:
+          - { name: year, label: Year, type: number, required: true }
+          - { name: title, label: Title, type: string, required: true }
+          - { name: authors, label: Authors, type: string }
+          - { name: journal, label: Journal / volume / pages, type: string }
+          - { name: link, label: Link to article (optional), type: string }
+
+  - name: site
+    label: Profile & contact
+    type: file
+    path: content/site.json
+    fields:
+      - { name: tagline, label: Intro line under his name, type: text }
+      - { name: photo, label: Profile photo, type: image }
+      - { name: email, label: Email, type: string }
+      - { name: phone, label: Phone (as shown), type: string }
+      - { name: whatsapp, label: WhatsApp number (digits only, with 234), type: string }
+      - { name: linkedin, label: LinkedIn link, type: string }
